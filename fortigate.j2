@@ -11,7 +11,7 @@ config vdom
 {% for fwa in fwaddrs %}
   edit "{{fwa.fwaname}}"
   set associated-interface "{{fwa.fwaint}}"
-  set subnet {{fwa.fwaip}} subnet {{fwa.fwasubnt|default("255.255.255.255")}}
+  set subnet {{fwa.fwaip}} {{fwa.fwasubnt|default("255.255.255.255")}}
  next
 {% endfor %}
 next
